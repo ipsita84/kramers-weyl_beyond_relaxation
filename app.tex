@@ -1,0 +1,296 @@
+\documentclass[aps,prb,onecolumn,nofootinbib,citeautoscript,10pt]{revtex4-2}  
+\synctex=1 
+
+
+
+\usepackage{amsmath,amssymb,bm} 
+\usepackage{graphicx,comment}
+
+\usepackage[tight]{subfigure} 
+
+\usepackage[dvipsnames]{xcolor} 
+\usepackage[papersize={8.5in,11in}]{geometry}
+\usepackage[colorlinks=true]{hyperref}
+\hypersetup{
+    bookmarks=true,         % show bookmarks bar?
+    unicode=false,          % non-Latin characters 
+    pdftoolbar=true,        % show Acrobat
+    pdfmenubar=true,        % show Acrobat 
+    pdffitwindow=false,     % window fit to page when opened
+    pdfstartview={FitH},    % fits the width of the page to the window
+    pdfkeywords={keyword1} {key2} {key3}, % list of keywords
+    pdfnewwindow=true,      % links in new window
+    colorlinks=true,       % false: boxed links; true: colored links
+    linkcolor=magenta, %red,          % color of internal links (change box color with linkbordercolor)
+    citecolor=blue,        % color of links to bibliography
+    filecolor=magenta,      % color of file links
+    urlcolor=blue           % color of external links
+} 
+
+\geometry{top=1.5cm, left= 1.5 cm, right= 1.5 cm, bottom= 1.5 cm}        
+
+
+
+%========================= PACKAGES ==================================
+\usepackage{graphicx}
+\usepackage{dcolumn}
+\usepackage{color}
+\usepackage{amssymb,amsmath}
+\usepackage{tabularx,graphicx}
+\usepackage{epstopdf}
+\usepackage{latexsym}
+\usepackage{colortbl}
+\usepackage{psfrag}
+\usepackage{bbm,bm,array,physics}
+\usepackage{dsfont}
+\usepackage{float}
+
+
+
+
+\def \nn{\nonumber \\}
+
+\def\*#1{\mathbf{#1}} %\bold font
+\newcommand{\at}[2][]{#1|_{#2}}
+
+
+
+
+\begin{document}
+
+
+
+\title{Supplementary material for ``Disentangling contributions to longitudinal magnetoconductivity for Kramers-Weyl nodes''}
+
+
+
+\author{Ipsita Mandal}
+\affiliation{Department of Physics, Shiv Nadar Institution of Eminence (SNIoE), Gautam Buddha Nagar, Uttar Pradesh 201314, India
+\\ipsita.mandal@snu.edu.in}
+
+
+
+\maketitle
+
+
+
+
+ 
+%%%%%%%%%%%%%%%%% Apppendix %%%%%%%%%%%%%%%%%%%%%
+
+\appendix
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Berry curvature and orbital magnetic moment} 
+\label{app_bc}
+
+For the $s^{\rm th}$ band, the vector fields for the BC and the OMM are obtained using \cite{xiao_review,xiao07_valley}
+\begin{align} 
+& {\boldsymbol \Omega}^s ( \boldsymbol k)  = 
+    i  \left[ \nabla_{ \boldsymbol k}  \psi_{s}({ \boldsymbol k}) \right ]^\dagger 
+    \cross  \left [ \nabla_{ \boldsymbol k}  \psi_{s}({ \boldsymbol k}) \right ]
+%%%%%%%%%%%%%%%%%%%%%%%
+\text{and } 
+{\boldsymbol {m}}^s ( \boldsymbol k) = 
+\frac{  -\,i \, e} {2 } \,
+ \left[ \nabla_{ \boldsymbol k} \psi_{s} ({ \boldsymbol k}) \right ]^\dagger 
+ \cross
+\Big [
+\left \lbrace \mathcal{H} ({ \boldsymbol k}) -\varepsilon^s
+({ \boldsymbol k}) 
+\right \rbrace
+\left \lbrace \boldsymbol \nabla_{ \boldsymbol k} \psi_{s}({ \boldsymbol k})
+ \right \rbrace \Big  ] ,
+%%%%%%%%%%%
+\end{align}
+respectively. For our two-band system, the expressions above simplify to \cite{fuchs-review}
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{align} 
+\label{eqomm}
+\Omega^s_i ( \boldsymbol  k) = \frac{  (-1)^{s} \,  
+\epsilon_{ijl}}
+ {4\,| \boldsymbol  k |^3} \, \boldsymbol k  \cdot
+ \left[   \partial_{k_j} \boldsymbol k \cross  
+ \partial_{k_l } \boldsymbol k \right ] \text{ and }
+%%%%%%%%%%%%%%%%%%%%%%%
+\boldsymbol m^s ( \boldsymbol  k) = 
+ e\left( s \, v_0 \, k\right) \boldsymbol \Omega \,.
+\end{align}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% pg-52, Fuchs thesis
+On evaluating the expressions in Eq.~\eqref{eqomm} for $\mathcal{H} ( \boldsymbol  k) $, we get
+\begin{align}
+\label{eqbcomm}
+{\boldsymbol \Omega}^s( \boldsymbol k) = 
+\frac{ -\, s  } { 2\, k^3 }
+ \left \lbrace k_x, \, k_y, \,  k_z \right \rbrace, \quad 
+%%%%%%%%%%
+{\boldsymbol m}^s( \boldsymbol k) = 
+\frac{ -\,  e\, v_0 } {2 \, k^2 } 
+ \left \lbrace k_x, \, k_y, \,  k_z \right \rbrace .
+\end{align}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Kinetic equations driven by electromagnetic fields}
+
+
+The kinetic equations are governed by the Hamilton's equations of motion for the electronic quasiparticles, occupying a given Bloch band. They are described by \cite{mermin, sundaram99_wavepacket, li2023_planar, ips-kush-review, ips-rsw-ph, ips-shreya}
+%%%%%%%%%%%%%%%%%%%
+\begin{align}
+\label{eqrkdot}
+\dot {\boldsymbol r} & = \nabla_{\boldsymbol k} \, \xi_s  
+- \dot{\boldsymbol k} \, \cross \, \boldsymbol \Omega^s  (\boldsymbol k)
+ \text{ and }  
+\dot{\boldsymbol k} = -\, e  \left( {\boldsymbol E}  
++ \dot{\boldsymbol r} \, \cross\, {\boldsymbol B} 
+	\right ) \nn
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\Rightarrow & \, \dot{\boldsymbol r}  = \mathcal{D}_s ({\boldsymbol k})
+	\left[   \boldsymbol{w}_s ({\boldsymbol k}) +
+	 e \, {\boldsymbol E}  \cross  
+\boldsymbol \Omega^s ({\boldsymbol k})   + 
+	 e   \left \lbrace \boldsymbol \Omega^s (\boldsymbol k )\cdot 
+ \boldsymbol{w}_s ({\boldsymbol k}) 
+ \right \rbrace  \boldsymbol B  \right] 
+%%%%%%%%%%%%%%%%%%%%%%%%%%	  
+ \text{ and } 
+\dot{\boldsymbol k}  = -\, e \,\mathcal{D}_s ({\boldsymbol k})
+  \left[   {\boldsymbol E} 
++   \boldsymbol{w}_s ({\boldsymbol k}) \cross  {\boldsymbol B} 
++  e  \left (  {\boldsymbol E}\cdot  {\boldsymbol B} \right )  
+\boldsymbol \Omega^s  ({\boldsymbol k})\right],
+\end{align}
+where
+\begin{align}
+\boldsymbol{w}_s ({\boldsymbol k}) = {\boldsymbol  v}^s(\boldsymbol k )
++  {\boldsymbol   v}_{(m)} ({\boldsymbol k} ) \,.
+\end{align}
+%%%%%%%%%%%%%%%%%%%
+The presence of $ {\boldsymbol \Omega}^s $ and $ \mathcal{D}_s $ reflect the nontrivial role played by a nonzero BC, as compared to the scenarios when the BC vanishes (see, for example, the systems discussed in Refs.~\cite{ips-kush, ips_tilted_dirac}). In particular, an extra term in the form of $- \dot{\boldsymbol k} \, \cross \, \boldsymbol \Omega^s $ represents an anomalous velocity, with the BC playing the counterpart of the magnetic field, albeit in the momentum space.  
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Results obtained from relaxation-time approximation}
+\label{secsig}
+
+In this section, we demonstrate the analytical results for the conductivity, obtained from the simplistic application of the relaxation-time approximation. We have used this formalism in our earlier works \cite{ips_rahul_ph_strain, rahul-jpcm, ips-ruiz, ips-rsw-ph, ips-shreya, ips-tilted, ips-internode, ips-spin1-ph} to derive the in-plane longitudinal and planar-Hall components. In order to obtain closed-form analytical expressions, we have to expand the $B $-dependent terms upto a given order in $B$, assuming it has a small magnitude, which is anyway required to justify ignoring Landau-level splitting. With this in mind, the following two quantities are expanded as shown below:
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{align}
+& f_0^\prime \left(\xi_s\right) = 
+f_0^\prime \big(  {\tilde \varepsilon}_s ({ \boldsymbol k}) \big)
++ \varepsilon^{(m)} \, f_0^{\prime \prime } \big ( {\tilde \varepsilon}_s ({ \boldsymbol k})\big )
++ \frac{1}{2} \left[ \varepsilon^{(m)} \right ]^2 
+f_0^{\prime \prime \prime}\big ( {\tilde \varepsilon}_s  ({ \boldsymbol k})\big )
+ + \mathcal{O} (B^3 )\,, 
+%%%%%%% 
+\text{ where }
+ {\tilde \varepsilon}_s  ({ \boldsymbol k})=
+ \varepsilon^s  ({ \boldsymbol k}) +  \frac{ e \,g\,\mu_B \,s \, B} {2}\,,
+ %%%%%%%%%%%%%%%%%
+\nn & \text{ and } \mathcal{D}_s = \sum \limits_{n=0}^{2} 
+\left [ -e \,  \Omega^z_s \, B \right ]^n 
++ \mathcal{O} (B^3 )\,.
+\end{align}
+%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%
+Here, the ``prime'' symbol denotes the operation of partial-differentiation, with respect to the variable shown explicitly within the brackets [e.g., $ f_0^\prime (\varepsilon) \equiv \partial_\varepsilon f_0 (\varepsilon)$]. 
+Since we are working in the $T \rightarrow 0 $ limit, we have to use $f_0^\prime (\varepsilon) \rightarrow -\, 
+\delta ( \varepsilon - \mu )$. Observing that the radial part of the integrals is with respect to the variable $k$, we need to use the following forms of the concerned expressions:
+\begin{align}
+& f_0^{\prime \prime } \big ( {\tilde \varepsilon}_s  ({ \boldsymbol k})\big )
+= \frac{ \partial_k f_0^\prime \big ( {\tilde \varepsilon}_s  ({ \boldsymbol k})\big ) }
+{2 \, c \, k  + s \, v_0 } \,, \quad
+%%%%%%%%%%%%%%%%%%%
+f_0^{\prime \prime \prime} \big ( {\tilde \varepsilon}_s  ({ \boldsymbol k})\big )
+= \frac{ \partial^2_k f_0^\prime \big ( {\tilde \varepsilon}_s  ({ \boldsymbol k})\big )
+}  {v_0^3 \, (2 \, c\, k + s\,  v_0 )^2 }
+-
+\frac{2 \,c\, \partial_k f_0^\prime \big ( {\tilde \varepsilon}_s  ({ \boldsymbol k})\big )
+}  { v_0^3 \, (2 \, c\, k + s\,v_0 )^3} \,.
+\end{align}
+%%%%%%%%%%%%%%%%%%%%%
+We refer to Refs.~\cite{ips-kush-review, ips_rahul_ph_strain, ips-rsw-ph} for a review of the generic expressions for the in-plane (i.e., coplanar with the applied electromagnetic fields) components the conductivity tensor.
+Noting that the in-plane anomalous-Hall part vanishes \cite{ips-ruiz, ips-rsw-ph, ips-spin1-ph}, the generic expression therein can be expressed as
+%%%%%%%%%%%%%%%%
+\begin{align}
+\label{eqsig}
+   \sigma^s_{i j}
+&= - \,e^2 \, \tau  
+\int \frac{ d^3 \boldsymbol k}{(2\, \pi)^3 } \, \mathcal{D}_s
+\left[  (w_s)_i \, + (W_s)_i \right ]
+\left [ (w_s)_j \, + (W_s)_j \right] \,
+f^\prime_0 \big (\xi_s \big )  \,,
+\text{ where }
+%%%%%%%%%%%%%%%%%%%%%%%
+\boldsymbol{W}_s 
+= e \left  ( {\boldsymbol w}_s \cdot 
+  \boldsymbol {\Omega}^s \right  ) \boldsymbol{B}\,.
+\end{align}
+%%%%%%%%%%%%%%%%%%%
+
+
+
+For our KWN system, only the longitudinal component survives, leading to
+%%%%%%%%%%%%%%%%%%%%%%%
+\begin{align}
+\label{eqrelax}
+ & \sigma^s_{zz} = \frac{e^2 \, \tau } {8 \,\pi ^3} 
+ \left (
+\sigma_{zz}^{0,s} + \sigma_{zz}^{{\rm bc},s}
++ \sigma_{zz}^{{\rm m},s} \right) ,
+%%%%%%%%%%%%%%%%%%%%
+\nn & \sigma_{zz}^{0,s}  =
+\frac{v_0^2 \left(\sqrt{v_0}
+-\sqrt{\frac{4 \,c \,{\tilde \mu} }{v_0}+v_0}\right)^2
+ \left[\sqrt{\frac{4\, c\, {\tilde \mu} } {v_0}+v_0}
+ +(s-1) \,  \sqrt{v_0} \right]^2}
+ {6 \,c^2 \,\sqrt{4 \,c\, {\tilde \mu} +v_0^2}}\,,
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\nn & \sigma_{zz}^{{\rm bc},s}  =
+\frac{2 \, e^2 \,c^2 \, B^2 }  
+ {15 \,v_0 \,\sqrt{4 \,c\, {\tilde \mu} + v_0^2}}
+\frac{  
+2 \,(80\, s-77)\, v_0^{\frac{3}{2}}\,
+\sqrt{\frac{4 \,c \,{\tilde \mu} } {v_0} + v_0}
++ 4 \,c \,{\tilde \mu}  \, (63-20 \, s) + (177-160 \,s)\, v_0^2 }
+   { \left(\sqrt{v_0}-\sqrt{\frac{4 \, c  \,{\tilde \mu} }   { v_0} + v_0}
+ \right)^2}\,,
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%
+\nn & \sigma_{zz}^{{\rm m},s}  =
+\frac{2  \,e^2 \, c^2 }
+{15 \,\sqrt{v_0} \;\sqrt{\frac{4 \,c \,{\tilde \mu} }{v_0} + v_0 } 
+\left(4 \,c \,{\tilde \mu} +v_0^2\right)^{5/2}
+   \left(\sqrt{v_0}-\sqrt{\frac{4 \,c \,{\tilde \mu} }{v_0}+v_0}\right)^2}
+  %%%%%%%%%
+\nn & \hspace{ 1.2 cm } \times   \Bigg [
+ 128 \,c^3 \,{\tilde \mu}^3 \,(9 \,s-10) + 16 \,c^2\, {\tilde \mu} ^2\, (136\, s-133) \, v_0^2 
++ 216\, c^2 \,{\tilde \mu} ^2\, (5-6\, s)\, v_0^{\frac{3}{2}}
+ \,\sqrt{\frac{4 \,c \,{\tilde \mu} }{v_0} + v_0}
+  + (118\, s-111) \,v_0^6
+ \nn & \hspace{1.75 cm}
+ %%%%%%%%%%
+ + 2\, (61-70 \,s ) \,v_0^{\frac{11}{2}}
+ \, \sqrt{\frac{4 \,c \,{\tilde \mu} }{v_0}+v_0}  
+ + 16 \,c \,{\tilde \mu}\,  (59 \,s-56) \,v_0^4
+% \nn & \hspace{2 cm}
+ %%%%%%%%%%
+ +2\, c\, {\tilde \mu} \, (361-424 \,s)\,
+   v_0^{\frac{7}{2}}\, \sqrt{\frac{4 \,c \,{\tilde \mu} }{v_0}+v_0} \,
+ \Bigg ]  \,,
+ %%%%%%%%%%%%
+\nn & \text{where } \tilde \mu = \mu - \frac{ e \,g\,\mu_B \,s \, B} {2} \,.
+\end{align}
+Here, the superscipts ``bc'' and ``m'' stand for the BC-only and OMM-sourced contributions, respectively. We note that $ \sigma_{zz}^{{\rm dr},s} \equiv \sigma_{zz}^{{\rm 0},s} \vert_{B=0}$ represents the Drude part (i.e., the residual conductivity in the absence of a magnetic field).
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\bibliography{ref_ksm.bib}
+
+
+
+
+\end{document}
